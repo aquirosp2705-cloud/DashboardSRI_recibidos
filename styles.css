@@ -1,0 +1,48 @@
+:root{
+  --azul:#1F3864; --azul2:#2E5496; --gris:#f2f4f8; --linea:#d9dee7;
+  --amarillo:#FFE699; --verde:#E2EFDA; --texto:#1c2733; --rojo:#b3392f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",system-ui,-apple-system,sans-serif;
+     background:var(--gris);color:var(--texto);font-size:15px}
+header{background:var(--azul);color:#fff;display:flex;align-items:center;
+       gap:14px;padding:12px 18px}
+#logo{width:44px;height:44px;border-radius:8px;background:#fff;object-fit:contain}
+header h1{font-size:18px;font-weight:600}
+header .sub{font-size:12.5px;color:#c6d2e8}
+.tabs{display:flex;background:var(--azul2)}
+.tab{flex:1;max-width:220px;padding:11px;border:none;background:transparent;
+     color:#dbe4f2;font-size:15px;font-weight:600;cursor:pointer}
+.tab.activa{background:var(--gris);color:var(--azul);border-radius:10px 10px 0 0}
+.filtros{display:flex;gap:8px;padding:12px 14px;flex-wrap:wrap;
+         background:var(--gris)}
+.filtros select,.filtros input{padding:9px 12px;border:1px solid var(--linea);
+  border-radius:8px;font-size:15px;background:#fff}
+.filtros input{flex:1;min-width:220px}
+#btnLimpiar{border:1px solid var(--linea);background:#fff;border-radius:8px;
+  width:40px;cursor:pointer;font-size:15px}
+main{padding:0 14px 30px;max-width:1200px;margin:0 auto}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+      gap:10px;margin:6px 0 14px}
+.kpi{background:#fff;border:1px solid var(--linea);border-radius:10px;
+     padding:10px 12px;text-align:center}
+.kpi .lbl{font-size:11.5px;color:#5b6b7a;text-transform:uppercase;
+          letter-spacing:.3px}
+.kpi .num{font-size:20px;font-weight:700;color:var(--azul);margin-top:2px}
+.card{background:#fff;border:1px solid var(--linea);border-radius:12px;
+      padding:14px;margin-bottom:16px}
+.card h2{font-size:15px;color:var(--azul);margin-bottom:10px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px;white-space:nowrap}
+th,td{padding:7px 10px;border-bottom:1px solid var(--linea);text-align:left}
+th{background:var(--azul);color:#fff;position:sticky;top:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+tr:nth-child(even) td{background:#f8fafc}
+tr.total td{background:var(--amarillo);font-weight:700}
+td.acum{background:var(--verde)!important}
+tr.rev td{color:var(--rojo);font-weight:600}
+footer{text-align:center;color:#8a97a5;font-size:12px;padding:14px}
+@media(max-width:700px){
+  body{font-size:14px} .kpi .num{font-size:17px}
+  th,td{padding:6px 7px}
+}

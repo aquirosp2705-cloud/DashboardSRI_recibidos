@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>CONFIPRES.EC · Dashboard SRI</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="logo.png">
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="logo" id="logo">
+  <div>
+    <h1>CONFIPRES.EC</h1>
+    <div class="sub">Compras y Retenciones · <span id="generado"></span></div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="tab activa" data-vista="compras">🛒 Compras</button>
+  <button class="tab" data-vista="retenciones">🧾 Retenciones</button>
+</nav>
+
+<section class="filtros">
+  <select id="fAnio"></select>
+  <select id="fMes"><option value="">Todos los meses</option></select>
+  <input type="search" id="fBusca"
+         placeholder="Buscar proveedor por iniciales o RUC…">
+  <button id="btnLimpiar" title="Limpiar filtros">✕</button>
+</section>
+
+<main>
+  <section id="kpis" class="kpis"></section>
+
+  <div class="card" id="cardMensual">
+    <h2 id="tituloMensual">Resumen mensual</h2>
+    <div class="scroll"><table id="tbMensual"></table></div>
+  </div>
+
+  <div class="card">
+    <h2 id="tituloDetalle">Detalle por proveedor</h2>
+    <div class="scroll"><table id="tbDetalle"></table></div>
+  </div>
+</main>
+
+<footer>Generado por SRI CONTROL DOCUMENTAL PRO · Uso interno</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
